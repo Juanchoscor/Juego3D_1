@@ -297,7 +297,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 132868085}
-  m_Material: {fileID: 13400000, guid: d326b4f633c0d9647b311444af77e453, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -375,6 +375,7 @@ GameObject:
   - component: {fileID: 275194853}
   - component: {fileID: 275194852}
   - component: {fileID: 275194855}
+  - component: {fileID: 275194856}
   m_Layer: 0
   m_Name: Bola 2
   m_TagString: Untagged
@@ -490,11 +491,24 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &275194856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275194850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7bc170bb9da0fe4c958bfaa8e57f517, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onGround: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,7 +644,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 720460863}
-  m_Material: {fileID: 13400000, guid: d326b4f633c0d9647b311444af77e453, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
