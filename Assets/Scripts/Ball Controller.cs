@@ -6,11 +6,13 @@ public class BallController : MonoBehaviour
 {
     public bool onGround;
     public float fuerza_y;
+    public float fuerza_x;
     // Start is called before the first frame update
     void Start()
     {
         onGround = false;
         fuerza_y=0;
+        fuerza_x=0;
     }
 
     // Update is called once per frame
@@ -27,7 +29,7 @@ public class BallController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A))
         {
             if (onGround){
-                Vector3 fuerza = new Vector3(0,500,fuerza_y);
+                Vector3 fuerza = new Vector3(fuerza_x,1000,fuerza_y);
                 GetComponent<Rigidbody>().AddForce(fuerza);
             }
         }
@@ -38,6 +40,14 @@ public class BallController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.X))
         {
           fuerza_y = fuerza_y +10;
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            fuerza_x = fuerza_x -10;
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+          fuerza_x = fuerza_x +10;
         }
 
     }
