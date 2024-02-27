@@ -1,16 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Cubo : MonoBehaviour
 {
     // Start is called before the first frame update
-    public int puntos;
-    public Text textoPuntos;
+    public int puntaje; //Puntos que da el cubo
+
     void Start()
     {
-        puntos =0;
+
     }
 
     // Update is called once per frame
@@ -21,7 +20,6 @@ public class Cubo : MonoBehaviour
 
     private void OnTriggerEnter(Collider c){
         Debug.Log("Choque tipo trigger");
-        puntos++;
-        textoPuntos.text = puntos.ToString();
+        GameObject.Find("GameManager").GetComponent<GameManager>().sumarPuntos(puntaje);
     }
 }
