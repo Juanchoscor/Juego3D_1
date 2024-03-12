@@ -21,5 +21,7 @@ public class GameManager : MonoBehaviour
     public void sumarPuntos(int puntaje){
         puntos = puntos + puntaje;
         textoPuntos.text = puntos.ToString();
+        
+        
     }
 }
