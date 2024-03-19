@@ -14,9 +14,9 @@ public class BallController : MonoBehaviour
     void Start()
     {
         onGround = false;
-        fuerza_y=0;
-        fuerza_z=0;
-        posicionInicial=this.transform.position;
+        fuerza_y = 0;
+        fuerza_z = 0;
+        posicionInicial = this.transform.position;
         rb = GetComponent<Rigidbody>();
 
         if (rb == null)
@@ -30,8 +30,12 @@ public class BallController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (onGround){
-                Vector3 fuerza = new Vector3(0,fuerza_y,fuerza_z);
+            Debug.Log("Restar intento");
+            GameObject.Find("GameManager").GetComponent<GameManager>().restarIntentos(1);
+
+            if (onGround)
+            {
+                Vector3 fuerza = new Vector3(0, fuerza_y, fuerza_z);
                 GetComponent<Rigidbody>().AddForce(fuerza);
             }
         }
